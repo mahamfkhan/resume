@@ -2,12 +2,12 @@ const config = require('./src/config');
 
 module.exports = {
   siteMetadata: {
-    title: 'Brittany Chiang',
+    title: 'Maham Faisal Khan',
     description:
-      'Brittany Chiang is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences.',
-    siteUrl: 'https://brittanychiang.com', // No trailing slash allowed!
-    image: '/og.png', // Path to your image you placed in the 'static' folder
-    twitterUsername: '@bchiang7',
+      'Maham Faisal Khan is a [your profession/title] who specializes in [your specialties].',
+    siteUrl: 'https://mahamfkhan.github.io/resume/', // Your GitHub Pages URL
+    image: '/og.png', // Make sure to add your own image in the static folder
+    twitterUsername: '@yourtwitterhandle', // If you have one, otherwise remove this line
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,15 +18,18 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
     {
+       {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Brittany Chiang',
-        short_name: 'Brittany Chiang',
+        name: 'Maham Faisal Khan',
+        short_name: 'Maham F. Khan',
         start_url: '/',
-        background_color: config.colors.darkNavy,
-        theme_color: config.colors.navy,
+        background_color: config.colors.darkNavy, // You may want to change these colors
+        theme_color: config.colors.navy, // You may want to change these colors
         display: 'minimal-ui',
-        icon: 'src/images/logo.png',
+        icon: 'src/images/logo.png', // Make sure to add your own logo image
+      },
+    },
       },
     },
     `gatsby-plugin-offline`,
