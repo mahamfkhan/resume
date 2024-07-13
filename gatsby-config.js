@@ -21,15 +21,13 @@ module.exports = {
        {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Maham Faisal Khan',
-        short_name: 'Maham F. Khan',
+        name: 'Brittany Chiang',
+        short_name: 'Brittany Chiang',
         start_url: '/',
-        background_color: config.colors.darkNavy, // You may want to change these colors
-        theme_color: config.colors.navy, // You may want to change these colors
+        background_color: config.colors.darkNavy,
+        theme_color: config.colors.navy,
         display: 'minimal-ui',
-        icon: 'src/images/logo.png', // Make sure to add your own logo image
-      },
-    },
+        icon: 'src/images/logo.png',
       },
     },
     `gatsby-plugin-offline`,
