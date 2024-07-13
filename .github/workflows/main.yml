@@ -20,11 +20,17 @@ jobs:
 
     - name: Install dependencies
       run: |
-        npm install -g gatsby-cli
+        npm install -g gatsby-cli@latest
         yarn install
+        yarn upgrade gatsby gatsby-cli
+
+    - name: Update browserslist
+      run: npx browserslist@latest --update-db
 
     - name: Build
       run: |
+        export NODE_OPTIONS="--max-old-space-size=4096"
+        node -e "process.setMaxListeners(20)"
         gatsby build
         echo "Build exit code: $?"
 
@@ -39,4 +45,4 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./public
+        publish
